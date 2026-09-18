@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio d'Enock Kaboré — Informaticien, Graphic & Motion Designer, Monteur Vidéo. Création de solutions logicielles sur-mesure et univers visuels captivants.">
+  <meta name="keywords"
+    content="Enock Kaboré, Développeur Web, Graphic Designer, Motion Designer, Monteur Vidéo, UI/UX, Portfolio, Glassmorphism">
+  <meta name="author" content="Enock Kaboré">
+  <title>Enock Kaboré — Informaticien, Graphic & Motion Designer</title>
+
+  <!-- Google Fonts : Geist, Geist Mono, Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- RemixIcon Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Orbes luminescents en verre d'arrière-plan -->
+  <div class="background-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- Trame de grille subtile -->
+  <div class="grid-overlay"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION GLASSBAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-glass-bar">
+      <a href="#home" class="brand-logo">
+        <div class="logo-badge">EK</div>
+        <span class="logo-name">Enock Kaboré</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">À propos</a></li>
+        <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <!-- Sélecteur de langue FR / EN -->
+        <div class="lang-switcher" aria-label="Sélecteur de langue">
+          <button class="lang-btn active" id="btnLangFr" onclick="setLanguage('fr')">FR</button>
+          <button class="lang-btn" id="btnLangEn" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <a href="#contact" class="btn-primary" data-i18n="btn_contact_me">
+          <i class="ri-mail-send-line"></i> Me contacter
+        </a>
+
+        <!-- Bouton Menu Mobile -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Ouvrir le menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         🟢 PAGE 1 : ACCUEIL / HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <!-- Zone Principale Hero (Hero Grid + Portrait Découpé Grand Format) -->
+        <div class="hero-main-wrapper">
+          <div class="hero-grid">
+            <!-- Colonne Texte & Pitch -->
+            <div class="hero-content">
+              <div class="badge-tag hero-profile-pill">
+                <div class="hero-mini-avatar-wrap">
+                  <img src="texture.png" alt="Enock Kaboré" class="hero-mini-avatar">
+                </div>
+                <span class="pulse-dot"></span>
+                <span data-i18n="hero_status">Disponible pour projets &amp; collaborations</span>
+              </div>
+
+              <h1 class="hero-title">
+                Enock Kaboré <br>
+                <span class="gradient-text" data-i18n="hero_roles">Informaticien & Création Visuelle</span>
+              </h1>
+
+              <p class="hero-subtitle" data-i18n="hero_tagline">
+                Informaticien, Graphic &amp; Motion Designer et Monteur Vidéo. Je conçois des solutions logicielles
+                performantes et des univers visuels captivants.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#portfolio" class="btn-primary" data-i18n="btn_explore_works">
+                  <i class="ri-fire-line"></i> Voir mes réalisations
+                </a>
+                <a href="#contact" class="btn-secondary" data-i18n="btn_contact_hero">
+                  <i class="ri-chat-1-line"></i> Démarrer un projet
+                </a>
+                <a href="CV_enocke.pdf" class="btn-secondary" onclick="downloadCV(event)"
+                  data-i18n="btn_download_cv_hero">
+                  <i class="ri-file-download-line"></i> CV (PDF)
+                </a>
+              </div>
+            </div>
+
+            <!-- Colonne Visuel Clé (Hero Art Glass Card Interactive) -->
+            <div class="hero-art-wrapper">
+              <div class="floating-glass-badge fbadge-1">
+                <i class="ri-code-s-slash-line" style="color: var(--pink-accent); font-size: 1.2rem;"></i>
+                <span>Full-Stack &amp; UI</span>
+              </div>
+
+              <div class="floating-glass-badge fbadge-2">
+                <i class="ri-movie-2-line" style="color: var(--coral-rose); font-size: 1.2rem;"></i>
+                <span>Motion &amp; 3D VFX</span>
+              </div>
+
+              <div class="glass-hero-card" id="heroCard3D">
+                <div class="card-topbar">
+                  <div class="window-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="card-tabs">
+                    <button class="tab-btn active" onclick="switchHeroTab('code')" id="tabBtnCode">Code</button>
+                    <button class="tab-btn" onclick="switchHeroTab('ui')" id="tabBtnUI">UI/UX</button>
+                    <button class="tab-btn" onclick="switchHeroTab('motion')" id="tabBtnMotion">Motion</button>
+                  </div>
+                </div>
+
+                <!-- Onglet 1 : Code -->
+                <div class="preview-tab-content active" id="tabContentCode">
+                  <div class="code-preview-block">
+                    <p><span class="code-keyword">const</span> <span class="code-prop">creator</span> = {</p>
+                    <p>&nbsp;&nbsp;<span class="code-prop">name</span>: <span class="code-str">"Enock Kaboré"</span>,
+                    </p>
+                    <p>&nbsp;&nbsp;<span class="code-prop">passions</span>: [<span class="code-str">"Software
+                        Eng"</span>, <span class="code-str">"Motion Graphics"</span>],</p>
+                    <p>&nbsp;&nbsp;<span class="code-prop">craftsmanship</span>: <span class="code-keyword">true</span>,
+                    </p>
+                    <p>&nbsp;&nbsp;<span class="code-func">buildExperience</span>() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-str">"Haute
+                        performance + Esthétique pure"</span>;</p>
+                    <p>&nbsp;&nbsp;}</p>
+                    <p>};</p>
+                  </div>
+                </div>
+
+                <!-- Onglet 2 : UI/UX Mockup -->
+                <div class="preview-tab-content" id="tabContentUI">
+                  <div class="ui-preview-mockup">
+                    <div class="mockup-header-bar">
+                      <span style="font-size:0.75rem; color:var(--pastel-blush);">App Dashboard • Glassmorphism
+                        v2.4</span>
+                    </div>
+                    <div class="mockup-grid-inner">
+                      <div class="mockup-box">
+                        <i class="ri-dashboard-line"
+                          style="font-size: 1.3rem; margin-bottom: 4px; color: var(--pink-accent);"></i>
+                        <span>Analytics Core</span>
+                      </div>
+                      <div class="mockup-box">
+                        <i class="ri-pie-chart-line"
+                          style="font-size: 1.3rem; margin-bottom: 4px; color: var(--coral-rose);"></i>
+                        <span>Design System</span>
+                      </div>
+                      <div class="mockup-box">
+                        <i class="ri-smartphone-line"
+                          style="font-size: 1.3rem; margin-bottom: 4px; color: var(--pastel-blush);"></i>
+                        <span>Mobile First</span>
+                      </div>
+                      <div class="mockup-box">
+                        <i class="ri-palette-line"
+                          style="font-size: 1.3rem; margin-bottom: 4px; color: var(--pink-accent);"></i>
+                        <span>Brand Assets</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Onglet 3 : Motion & Video Preview -->
+                <div class="preview-tab-content" id="tabContentMotion">
+                  <div class="video-preview-player">
+                    <div class="motion-orb-preview">
+                      <i class="ri-play-fill" style="font-size: 2.2rem; color: #fff;"></i>
+                    </div>
+                    <h4 style="font-family: var(--font-display); font-size: 1rem; color: #fff;">Showreel 2026 — Motion
+                      &amp; VFX</h4>
+                    <p style="font-size: 0.8rem; color: var(--pastel-blush);">Premiere Pro • After Effects • 4K 60FPS
+                    </p>
+                    <div class="video-timeline">
+                      <div class="video-progress"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portrait Découpé Grand Format Centré (Au-dessus de la bande passante) -->
+          <div class="hero-centerpiece" id="heroCenterpiece">
+            <div class="hero-ambient-glow"></div>
+            <div class="hero-photo-wrap">
+              <img src="texture.png" alt="Enock Kaboré — Portrait Professionnel" class="hero-cutout-img"
+                id="heroCutoutImg">
+            </div>
+            <div class="hero-photo-badge">
+              <span class="pulse-dot"></span>
+              <span data-i18n="hover_reveal">Survolez pour révéler les couleurs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bannière Défilé (Ticker / Marquee) -->
+        <div class="ticker-section">
+          <div class="ticker-track">
+            <span class="ticker-item">UI/UX Design <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Développement Full-Stack <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Montage Vidéo &amp; Motion <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Identity Design &amp; Branding <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">3D Modeling &amp; VFX <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Architecture Web Moderne <span class="ticker-dot">•</span></span>
+            <!-- Duplicate for continuous marquee -->
+            <span class="ticker-item">UI/UX Design <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Développement Full-Stack <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Montage Vidéo &amp; Motion <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Identity Design &amp; Branding <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">3D Modeling &amp; VFX <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">Architecture Web Moderne <span class="ticker-dot">•</span></span>
+          </div>
+        </div>
+
+        <!-- Indicateurs de Confiance / Métriques (Stats) -->
+        <div class="stats-grid">
+          <div class="stat-glass-card">
+            <div class="stat-number" data-target="4">+3</div>
+            <div class="stat-label" data-i18n="stat_exp">Années d'expérience</div>
+          </div>
+          <div class="stat-glass-card">
+            <div class="stat-number" data-target="48">+10</div>
+            <div class="stat-label" data-i18n="stat_projects">Projets Réalisés</div>
+          </div>
+          <div class="stat-glass-card">
+            <div class="stat-number" data-target="32">+32</div>
+            <div class="stat-label" data-i18n="stat_clients">Clients &amp; Partenaires</div>
+          </div>
+          <div class="stat-glass-card">
+            <div class="stat-number" data-target="100">100%</div>
+            <div class="stat-label" data-i18n="stat_satisfaction">Satisfaction Client</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         🔵 PAGE 2 : À PROPOS (ABOUT ME)
+         ========================================================================== -->
+    <section class="section-wrapper" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="about_tag">Mon Parcours</span>
+          <h2 class="section-title" data-i18n="about_title">Créativité Visuelle &amp; Rigueur Informatique</h2>
+          <p class="section-desc" data-i18n="about_subtitle">
+            Découvrez qui je suis, ma vision transversale et les technologies qui alimentent mes projets du concept au
+            produit final.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Carte Profil & Avatar avec texture.png -->
+          <div class="profile-card">
+            <div class="avatar-wrapper">
+              <div class="avatar-ring"></div>
+              <div class="avatar-img-container">
+                <img src="texture.png" alt="Enock Kaboré — Informaticien & Designer" class="profile-photo"
+                  id="profilePhoto">
+                <div class="photo-ambient-lighting"></div>
+                <div class="photo-hint-badge">
+                  <i class="ri-sparkling-fill"></i> <span data-i18n="hover_reveal">Survolez-moi</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="profile-name">Enock Kaboré</h3>
+            <p class="profile-role" data-i18n="profile_role_desc">Informaticien &amp; Créatif Multidisciplinaire</p>
+
+            <div class="profile-status-badge">
+              <span class="pulse-dot"></span>
+              <span data-i18n="profile_available">Ouvert aux opportunités 2026</span>
+            </div>
+
+            <div class="profile-quick-stats">
+              <div class="p-stat-item">
+                <h4>Code</h4>
+                <p>Full-Stack</p>
+              </div>
+              <div class="p-stat-item">
+                <h4>Design</h4>
+                <p>UI / Branding</p>
+              </div>
+              <div class="p-stat-item">
+                <h4>Video</h4>
+                <p>Motion &amp; VFX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio Narrative -->
+          <div class="about-narrative">
+            <div class="narrative-card">
+              <h3><i class="ri-compass-3-line" style="color:var(--coral-rose);"></i> <span
+                  data-i18n="bio_title_1">L'alliance de la logique et de l'émotion</span></h3>
+              <p data-i18n="bio_p1">
+                Passionné par les sciences informatiques et les arts visuels depuis mes débuts, j'ai développé une
+                approche hybride unique. Je ne me contente pas de coder des interfaces : je conçois des univers complets
+                où la performance technique soutient une direction artistique percutante.
+              </p>
+              <p data-i18n="bio_p2">
+                Qu'il s'agisse de concevoir une architecture logicielle robuste, de prototyper un produit digital
+                intuitif sur Figma, ou de monter un film promotionnel dynamique rythmé avec des effets After Effects &
+                3D, mon objectif reste invariable : l'excellence d'exécution et l'impact mémorable.
+              </p>
+            </div>
+
+            <div class="narrative-card">
+              <h3><i class="ri-trophy-line" style="color:var(--pink-accent);"></i> <span data-i18n="bio_title_2">Mon
+                  engagement professionnel</span></h3>
+              <p data-i18n="bio_p3">
+                Chaque projet est traité avec rigueur : code propre, documentation soignée, ergonomie étudiée et respect
+                strict des délais. Je collabore aussi bien avec des startups ambitieuses qu'avec des marques établies
+                pour propulser leur présence digitale.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matrice de Compétences (Skills Breakdown) -->
+        <div class="skills-pillars-grid">
+          <!-- Pilier 1 : Informatique & Dév -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i class="ri-terminal-box-line"></i>
+            </div>
+            <h3 data-i18n="pillar_dev_title">Informatique &amp; Dév</h3>
+            <p class="pillar-desc" data-i18n="pillar_dev_desc">
+              Développement de solutions web et mobiles fiables, APIs performantes et architectures modulaires.
+            </p>
+            <div class="skill-meters">
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>JavaScript / TypeScript / React / Flutter / </span><span>92%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>HTML5 / CSS3 / Vanilla &amp; Responsive</span><span>98%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 98%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Python &amp; Back-End / APIs REST / FastApi</span><span>85%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Git, CI/CD &amp; Architecture Web</span><span>88%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pilier 2 : Design Graphique & UI/UX -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i class="ri-paint-brush-line"></i>
+            </div>
+            <h3 data-i18n="pillar_design_title">Design Graphique &amp; UI/UX</h3>
+            <p class="pillar-desc" data-i18n="pillar_design_desc">
+              Identités visuelles distinctives, ergonomie utilisateur, chartes graphiques et prototypage de haut niveau.
+            </p>
+            <div class="skill-meters">
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Figma &amp; Prototypage UI/UX</span><span>95%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Branding &amp; Identité de Marque</span><span>90%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Adobe Photoshop / Affinity &amp; Retouche</span><span>94%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 94%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Adobe Illustrator (Vectoriel/Print)</span><span>89%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 89%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pilier 3 : Montage Vidéo & Motion -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i class="ri-film-line"></i>
+            </div>
+            <h3 data-i18n="pillar_motion_title">Montage Vidéo &amp; Motion</h3>
+            <p class="pillar-desc" data-i18n="pillar_motion_desc">
+              Storytelling visuel percutant, animations graphiques 2D/3D, étalonnage cinématique et sound design.
+            </p>
+            <div class="skill-meters">
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Adobe Premiere Pro (Montage Rythmé)</span><span>96%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 96%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Adobe After Effects (Motion &amp; VFX)</span><span>90%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Étalonnage Vidéo (Color Grading)</span><span>87%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 87%;"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-info"><span>Blender 3D (Éléments &amp; Rendu)</span><span>80%</span></div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Environnement & Outils (Tech Stack & Tools Grid) -->
+        <div class="tools-showcase">
+          <h3 class="tools-title" data-i18n="tools_title">Environnement de Travail &amp; Outils Maîtrisés</h3>
+          <div class="tools-grid">
+            <div class="tool-badge-glass">
+              <img src="téléchargé.png" alt="Logo HTML 3D" class="tool-icon">
+              <span class="tool-name">VS Code</span>
+              <span class="tool-sub">Code Editor</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="3D Visualization of «FIGMA» Logo.png" alt="Logo HTML 3D" class="tool-icon">
+
+              <span class="tool-name">Figma</span>
+              <span class="tool-sub">UI/UX &amp; Specs</span>
+            </div>
+            <div class="tool-badge-glass">
+              <i class="ri-movie-fill tool-icon"></i>
+              <span class="tool-name">Premiere Pro</span>
+              <span class="tool-sub">Video Editing</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="after.png" alt="Logo HTML 3D" class="tool-icon">
+              <span class="tool-name">After Effects</span>
+              <span class="tool-sub">Motion Graphics</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="bblender.png" alt="Logo HTML 3D" class="tool-icon">
+
+              <span class="tool-name">Blender</span>
+              <span class="tool-sub">3D &amp; VFX</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="3d rendered photoshop icon _ Premium PSD.png" alt="Logo HTML 3D" class="tool-icon">
+
+              <span class="tool-name">Photoshop</span>
+              <span class="tool-sub">Digital Art</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="all.png" alt="Logo HTML 3D" class="tool-icon">
+              <span class="tool-name">Illustrator</span>
+              <span class="tool-sub">Vector Branding</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="Download GitHub Logo Rounded.png" alt="Logo HTML 3D" class="tool-icon">
+
+              <span class="tool-name">Git / GitHub</span>
+              <span class="tool-sub">Version Control</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="React js 3d icon _ Premium PSD.png" alt="Logo HTML 3D" class="tool-icon">
+              <span class="tool-name">React</span>
+              <span class="tool-sub">Modern UI Web</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="788130003588546294.png" alt="Logo HTML 3D" class="tool-icon">
+              <span class="tool-name">Python</span>
+              <span class="tool-sub">Data &amp; Scripting</span>
+            </div>
+            <div class="tool-badge-glass">
+              <img src="Flutter Logo - development SDK Pin.png" alt="Logo HTML 3D" class="tool-icon">
+              <span class="tool-name">Flutter</span>
+              <span class="tool-sub">Cross-Platform</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Parcours & Diplômes (Timeline) -->
+        <div class="timeline-section">
+          <div class="timeline-grid">
+            <!-- Formations -->
+            <div>
+              <h3 class="timeline-col-title"><i class="ri-graduation-cap-line"></i> <span
+                  data-i18n="timeline_edu_title">Formation &amp; Diplômes</span></h3>
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-date">2022 — 2025</div>
+                  <div class="timeline-role" data-i18n="edu_deg_1">Licence en Informatiques et entreprenariat</div>
+                  <div class="timeline-company">burkina institute of technology</div>
+                  <p class="timeline-desc" data-i18n="edu_desc_1">Spécialisation en génie logiciel, algorithmique,
+                    développement web/mobile et bases de données relationnelles.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-date">2023 — 2024</div>
+                  <div class="timeline-role" data-i18n="edu_deg_2">premier projet en Motion Design &amp; Étalonnage
+                  </div>
+                  <div class="timeline-company">collection carbones</div>
+                  <p class="timeline-desc" data-i18n="edu_desc_2">Perfectionnement aux techniques avancées de
+                    compositing, keyframing cinématique et intégration 3D.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expériences -->
+            <div>
+              <h3 class="timeline-col-title"><i class="ri-briefcase-4-line"></i> <span
+                  data-i18n="timeline_exp_title">Expériences Professionnelles</span></h3>
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-date">2023 — Présent</div>
+                  <div class="timeline-role" data-i18n="exp_role_1">Lead Designer &amp; Développeur Full-Stack</div>
+                  <div class="timeline-company">Freelance Studio — Enock Kaboré</div>
+                  <p class="timeline-desc" data-i18n="exp_desc_1">Conception de plateformes SaaS, chartes graphiques
+                    complètes, et vidéos commerciales pour clients en Afrique et en Europe.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-date">2021 — 2023</div>
+                  <div class="timeline-role" data-i18n="exp_role_2">Monteur Vidéo &amp; Graphiste Digital</div>
+                  <div class="timeline-company">Agence Média &amp; Événementiel</div>
+                  <p class="timeline-desc" data-i18n="exp_desc_2">Production de contenus réseaux sociaux (TikTok,
+                    Reels), affiches publicitaires et animations d'écrans pour conférences.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton Téléchargement CV -->
+        <div class="cv-download-wrapper">
+          <a href="CV_enocke.pdf" class="btn-primary" download="CV_Enock_Kabore_FR.pdf" data-i18n="btn_download_cv_fr">
+            <i class="ri-file-pdf-line"></i> Télécharger le CV français
+          </a>
+          <a href="CV_enock ing.pdf" class="btn-secondary" download="CV_Enock_Kabore_EN.pdf"
+            data-i18n="btn_download_cv_en">
+            <i class="ri-file-pdf-line"></i> Download English resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         🟣 PAGE 3 : PORTFOLIO / GALERIE DES PROJETS (WORKS / SHOWCASE)
+         ========================================================================== -->
+    <section class="section-wrapper" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="portfolio_tag">Galerie des Projets</span>
+          <h2 class="section-title" data-i18n="portfolio_title">Sélection de Mes Réalisations</h2>
+          <p class="section-desc" data-i18n="portfolio_subtitle">
+            Explorez mes projets récents en développement d'applications, identités visuelles et créations motion
+            design.
+          </p>
+        </div>
+
+        <!-- Barre de Filtres Dynamiques -->
+        <div class="filter-bar-container">
+          <div class="filter-glass-pill" role="tablist">
+            <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')"
+              data-i18n="filter_all">Tout</button>
+            <button class="filter-btn" data-filter="dev" onclick="filterProjects('dev')"
+              data-i18n="filter_dev">Informatique &amp; Web/Mobile</button>
+            <button class="filter-btn" data-filter="design" onclick="filterProjects('design')"
+              data-i18n="filter_design">Design Graphique &amp; Branding</button>
+            <button class="filter-btn" data-filter="video" onclick="filterProjects('video')"
+              data-i18n="filter_video">Montage Vidéo &amp; Motion</button>
+          </div>
+        </div>
+
+        <!-- Logos des outils et écosystèmes utilisés au quotidien -->
+        <div class="portfolio-logo-showcase" aria-label="Outils et technologies utilisés">
+          <div class="portfolio-logo-heading">
+            <span class="portfolio-logo-kicker">STACK / 2026</span>
+            <span class="portfolio-logo-line"></span>
+            <span class="portfolio-logo-note">Des idées au rendu final</span>
+          </div>
+          <div class="portfolio-logo-marquee">
+            <div class="portfolio-logo-track">
+              <div class="portfolio-logo-item" style="--logo-color: #61dafb; --logo-delay: 0s;"><span
+                  class="portfolio-logo-mark">R</span><span>React</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #f24e1e; --logo-delay: -0.8s;"><span
+                  class="portfolio-logo-mark">F</span><span>Figma</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #ff9a00; --logo-delay: -1.6s;"><span
+                  class="portfolio-logo-mark">Ai</span><span>Illustrator</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #31a8ff; --logo-delay: -2.4s;"><span
+                  class="portfolio-logo-mark">Ps</span><span>Photoshop</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #9999ff; --logo-delay: -3.2s;"><span
+                  class="portfolio-logo-mark">Pr</span><span>Premiere Pro</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #cf96fd; --logo-delay: -4s;"><span
+                  class="portfolio-logo-mark">Ae</span><span>After Effects</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #f5792a; --logo-delay: -4.8s;"><span
+                  class="portfolio-logo-mark">B</span><span>Blender</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #f05032; --logo-delay: -5.6s;"><span
+                  class="portfolio-logo-mark">G</span><span>Git</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #3776ab; --logo-delay: -6.4s;"><span
+                  class="portfolio-logo-mark">Py</span><span>Python</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #47a248; --logo-delay: -7.2s;"><span
+                  class="portfolio-logo-mark">M</span><span>MongoDB</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #61dafb; --logo-delay: 0s;"><span
+                  class="portfolio-logo-mark">R</span><span>React</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #f24e1e; --logo-delay: -0.8s;"><span
+                  class="portfolio-logo-mark">F</span><span>Figma</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #ff9a00; --logo-delay: -1.6s;"><span
+                  class="portfolio-logo-mark">Ai</span><span>Illustrator</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #31a8ff; --logo-delay: -2.4s;"><span
+                  class="portfolio-logo-mark">Ps</span><span>Photoshop</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #9999ff; --logo-delay: -3.2s;"><span
+                  class="portfolio-logo-mark">Pr</span><span>Premiere Pro</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #cf96fd; --logo-delay: -4s;"><span
+                  class="portfolio-logo-mark">Ae</span><span>After Effects</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #f5792a; --logo-delay: -4.8s;"><span
+                  class="portfolio-logo-mark">B</span><span>Blender</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #f05032; --logo-delay: -5.6s;"><span
+                  class="portfolio-logo-mark">G</span><span>Git</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #3776ab; --logo-delay: -6.4s;"><span
+                  class="portfolio-logo-mark">Py</span><span>Python</span></div>
+              <div class="portfolio-logo-item" style="--logo-color: #47a248; --logo-delay: -7.2s;"><span
+                  class="portfolio-logo-mark">M</span><span>MongoDB</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grille des Projets -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projet 1: Dev -->
+          <article class="project-card" data-category="dev" data-project-id="1">
+            <div class="project-thumbnail">
+              <span class="project-category-badge">Informatique &amp; Web</span>
+              <div class="project-visual-mock">
+                <i class="ri-terminal-box-line" style="font-size: 4rem; color: var(--coral-rose);"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Analyse-fondamentale — Plateforme finTech</h3>
+              <p class="project-role">Architecte Full-Stack &amp; UI Designer</p>
+              <p class="project-desc">Plateforme d'aanalyse du marché mondial, boster par AI intégrant un tableau de
+                bord
+                analytique en temps réel ultra-rapide.</p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML/CSS/js</span>
+                <span class="tech-tag">Node.js / expressjs / python</span>
+                <span class="tech-tag">Figma</span>
+              </div>
+              <button class="btn-view-project" onclick="openCaseStudy(1)" data-i18n="btn_view_study">
+                <i class="ri-eye-line"></i> Voir l'étude de cas
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 2: Video/Motion -->
+          <article class="project-card" data-category="video" data-project-id="2">
+            <div class="project-thumbnail">
+              <span class="project-category-badge">Montage &amp; Motion</span>
+              <div class="project-visual-mock">
+                <i class="ri-film-line" style="font-size: 4rem; color: var(--pink-accent);"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">colection carbone</h3>
+              <p class="project-role">Monteur Vidéo &amp; Frame Artist</p>
+              <p class="project-desc">Spot promotionnel immersif avec animations 3D VFX, synchronisation sonore
+                dynamique et color grading cinématographique.</p>
+              <div class="project-tags">
+                <span class="tech-tag">Filmora</span>
+                <span class="tech-tag">After Effects</span>
+                <span class="tech-tag">Blender 3D</span>
+                <span class="tech-tag"></span>
+              </div>
+              <button class="btn-view-project" onclick="openCaseStudy(2)" data-i18n="btn_view_study">
+                <i class="ri-eye-line"></i> Voir l'étude de cas
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 3: Design -->
+          <article class="project-card" data-category="design" data-project-id="3">
+            <div class="project-thumbnail">
+              <span class="project-category-badge">Design &amp; Branding</span>
+              <div class="project-visual-mock">
+
+                <i class="ri-film-line" style="font-size: 4rem; color: var(--pink-accent);"></i>
+
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">collection carbone</h3>
+              <p class="project-role">Directeur Artistique &amp; Brand Designer</p>
+              <p class="project-desc">Création d'une identité visuelle premium : logotype vectoriel, typographies
+                exclusives, charte graphique et mockups packaging.</p>
+              <div class="project-tags">
+                <span class="tech-tag">Illustrator</span>
+                <span class="tech-tag">Photoshop</span>
+                <span class="tech-tag">Affinity</span>
+                <span class="tech-tag">Brand Strategy</span>
+              </div>
+              <button class="btn-view-project" onclick="openCaseStudy(3)" data-i18n="btn_view_study">
+                <i class="ri-eye-line"></i> Voir l'étude de cas
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 4: Dev -->
+          <article class="project-card" data-category="dev" data-project-id="4">
+            <div class="project-thumbnail">
+              <span class="project-category-badge">Informatique &amp; Mobile</span>
+              <div class="project-visual-mock">
+                <i class="ri-smartphone-line" style="font-size: 4rem; color: var(--coral-rose);"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">FasoPrepa plateforme EdTech</h3>
+              <p class="project-role">Développeur Mobile &amp; UX Researcher</p>
+              <p class="project-desc">Application educatives moderne booster par AI.</p>
+              <div class="project-tags">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">supabase</span>
+                <span class="tech-tag">Figma UI</span>
+              </div>
+              <button class="btn-view-project" onclick="openCaseStudy(4)" data-i18n="btn_view_study">
+                <i class="ri-eye-line"></i> Voir l'étude de cas
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         🟡 PAGE 4 : MODAL ÉTUDE DE CAS DÉTAILLÉE (PROJECT CASE STUDY)
+         ========================================================================== -->
+    <div class="modal-overlay" id="caseStudyModal" aria-hidden="true">
+      <div class="modal-container">
+        <button class="modal-close-btn" onclick="closeCaseStudy()" aria-label="Fermer l'étude de cas">
+          <i class="ri-close-line"></i>
+        </button>
+
+        <div id="modalDynamicContent">
+          <!-- Injecté dynamiquement par JavaScript -->
+        </div>
+
+        <div class="modal-nav-footer">
+          <button class="btn-secondary" onclick="navigateCaseStudy(-1)" id="btnPrevProject">
+            <i class="ri-arrow-left-line"></i> <span data-i18n="modal_prev">Projet Précédent</span>
+          </button>
+          <button class="btn-primary" onclick="navigateCaseStudy(1)" id="btnNextProject">
+            <span data-i18n="modal_next">Projet Suivant</span> <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         🟠 PAGE 5 : SERVICES & OFFRES (SERVICES & PRICING)
+         ========================================================================== -->
+    <section class="section-wrapper" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="services_tag">Mes Offres</span>
+          <h2 class="section-title" data-i18n="services_title">Des Solutions Conçues Pour Votre Réussite</h2>
+          <p class="section-desc" data-i18n="services_subtitle">
+            Bénéficiez d'une synergie unique entre code performant, identité visuelle remarquable et contenu vidéo
+            captivant.
+          </p>
+        </div>
+
+        <!-- 3 Packs de Services -->
+        <div class="services-cards-grid">
+          <!-- Pack 1 : Dév Web & App -->
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ri-code-box-line"></i>
+            </div>
+            <h3 data-i18n="service_1_title">Développement Web &amp; App</h3>
+            <p data-i18n="service_1_desc">
+              Création de plateformes sur-mesure, applications réactives, intégration d'interfaces ergonomiques et
+              optimisées SEO.
+            </p>
+            <ul class="service-deliverables">
+              <li><i class="ri-checkbox-circle-fill"></i> Sites vitrines &amp; e-commerce immersifs</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Applications web modernes (SPA/PWA)</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Intégration responsive &amp; Glassmorphism</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Optimisation des performances &amp; SEO</li>
+            </ul>
+            <a href="#contact" class="btn-secondary" onclick="preselectService('Informatique')"
+              data-i18n="btn_choose_service">
+              Demander un devis
+            </a>
+          </div>
+
+          <!-- Pack 2 : Design & Branding (Vedette) -->
+          <div class="service-card featured-service">
+            <span class="featured-pill" data-i18n="service_popular">Le Plus Demandé</span>
+            <div class="service-icon-wrap">
+              <i class="ri-palette-line"></i>
+            </div>
+            <h3 data-i18n="service_2_title">Design Graphique &amp; Branding</h3>
+            <p data-i18n="service_2_desc">
+              Identités mémorables de A à Z : logotypes percutants, maquettes UI Figma interactives et
+              déclinaisons
+              marketing.
+            </p>
+            <ul class="service-deliverables">
+              <li><i class="ri-checkbox-circle-fill"></i> Logotype vectoriel &amp; guide de marque</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Prototypage Figma UI/UX complet</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Affiches, flyers &amp; visuels réseaux sociaux</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Mockups professionnels prêts à l'impression</li>
+            </ul>
+            <a href="#contact" class="btn-primary" onclick="preselectService('Graphisme')"
+              data-i18n="btn_choose_service">
+              Demander un devis
+            </a>
+          </div>
+
+          <!-- Pack 3 : Production Vidéo & Motion -->
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <i class="ri-movie-2-line"></i>
+            </div>
+            <h3 data-i18n="service_3_title">Production Vidéo &amp; Motion</h3>
+            <p data-i18n="service_3_desc">
+              Montage storytellé pour captiver votre audience sur toutes les plateformes (YouTube, Reels, TikTok,
+              publicité).
+            </p>
+            <ul class="service-deliverables">
+              <li><i class="ri-checkbox-circle-fill"></i> Montage dynamique avec transitions sur-mesure</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Animations graphiques 2D/3D &amp; typographies</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Étalonnage cinématique (Color Grading)</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Sound design percutant &amp; sous-titrage</li>
+            </ul>
+            <a href="#contact" class="btn-secondary" onclick="preselectService('Vidéo')" data-i18n="btn_choose_service">
+              Demander un devis
+            </a>
+          </div>
+        </div>
+
+        <!-- Processus de Travail en 4 étapes ("How I Work") -->
+        <div class="workflow-section">
+          <h3 class="section-title" style="font-size: 2rem;" data-i18n="workflow_title">Comment Nous Allons
+            Travailler
+            Ensemble</h3>
+          <p class="section-desc" style="max-width: 600px; margin: 0 auto 3rem auto;" data-i18n="workflow_subtitle">
+            Une méthodologie transparente et éprouvée pour garantir des résultats à la hauteur de vos ambitions.
+          </p>
+
+          <div class="workflow-grid">
+            <div class="workflow-step-card">
+              <span class="step-number">01</span>
+              <h4 data-i18n="step_1_title">Brief &amp; Analyse</h4>
+              <p data-i18n="step_1_desc">Compréhension approfondie de vos objectifs, de votre audience cible et
+                définition du cahier des charges.</p>
+            </div>
+            <div class="workflow-step-card">
+              <span class="step-number">02</span>
+              <h4 data-i18n="step_2_title">Conception &amp; Maquettage</h4>
+              <p data-i18n="step_2_desc">Élaboration des wireframes, storyboards vidéo et planches de style
+                soumises à
+                votre validation.</p>
+            </div>
+            <div class="workflow-step-card">
+              <span class="step-number">03</span>
+              <h4 data-i18n="step_3_title">Dév &amp; Montage</h4>
+              <p data-i18n="step_3_desc">Phase de production intensive : écriture du code, compositing vidéo,
+                sound
+                design et finitions minutieuses.</p>
+            </div>
+            <div class="workflow-step-card">
+              <span class="step-number">04</span>
+              <h4 data-i18n="step_4_title">Livraison &amp; Révisions</h4>
+              <p data-i18n="step_4_desc">Déploiement en ligne ou export haute définition, retouches incluses et
+                accompagnement au lancement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         🔴 PAGE 6 : CONTACT (CONTACT PAGE)
+         ========================================================================== -->
+    <section class="section-wrapper" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact_tag">Prenons Contact</span>
+          <h2 class="section-title" data-i18n="contact_title">Discutons de Votre Prochain Projet</h2>
+          <p class="section-desc" data-i18n="contact_subtitle">
+            Une idée, un besoin technique ou une opportunité de collaboration ? Envoyez-moi un message et je vous
+            réponds sous 24h.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Colonne Coordonnées Directes & Réseaux -->
+          <div class="contact-info-panel">
+            <div class="contact-card-glass">
+              <h3 style="font-family: var(--font-display); margin-bottom: 1.5rem; font-size: 1.35rem;"
+                data-i18n="contact_info_title">Coordonnées Directes</h3>
+
+              <a href="mailto:contact@enockkabore.dev" class="contact-channel">
+                <div class="channel-icon"><i class="ri-mail-line"></i></div>
+                <div class="channel-details">
+                  <h5 data-i18n="label_email">Adresse E-mail</h5>
+                  <p>enocksidbenewendekabore@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://wa.me/22662782098" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <div class="channel-icon"><i class="ri-whatsapp-line"></i></div>
+                <div class="channel-details">
+                  <h5 data-i18n="label_phone">Téléphone / WhatsApp</h5>
+                  <p>+226 05 58 55 74 /62 78 20 98 WhatsApp</p>
+                </div>
+              </a>
+
+              <div class="contact-channel">
+                <div class="channel-icon"><i class="ri-map-pin-2-line"></i></div>
+                <div class="channel-details">
+                  <h5 data-i18n="label_location">Localisation &amp; Mobilité</h5>
+                  <p data-i18n="val_location">Ouagadougou, BF • Collaborations Mondiales à Distance</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card-glass">
+              <h3 style="font-family: var(--font-display); margin-bottom: 0.5rem; font-size: 1.2rem;"
+                data-i18n="contact_socials_title">Réseaux &amp; Plateformes Pro</h3>
+              <p style="font-size: 0.85rem; color: var(--pastel-blush); margin-bottom: 1.25rem;"
+                data-i18n="contact_socials_sub">Retrouvez mes publications, codes et créations sur le web :</p>
+
+              <div class="social-links-grid">
+                <a href="https://github.com/trinity667" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i class="ri-github-fill"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/enock-kabore-230360369" target="_blank" rel="noopener noreferrer"
+                  class="social-pill">
+                  <i class="ri-linkedin-box-fill"></i> LinkedIn
+                </a>
+                <a href="https://wa.me/22662782098" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i class="ri-whatsapp-fill"></i> WhatsApp
+                </a>
+                <a href="https://behance.net" target="_blank" rel="noopener" class="social-pill">
+                  <i class="ri-behance-fill"></i> Behance
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="social-pill">
+                  <i class="ri-youtube-fill"></i> YouTube
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-pill">
+                  <i class="ri-instagram-fill"></i> Instagram
+                </a>
+                <a href="https://dribbble.com" target="_blank" rel="noopener" class="social-pill">
+                  <i class="ri-dribbble-fill"></i> Dribbble
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulaire de Contact Glassmorphism -->
+          <form class="contact-form-glass" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="fullName" class="form-label" data-i18n="form_name">Nom complet *</label>
+                <input type="text" id="fullName" name="name" class="form-input" placeholder="Ex: Alex Traoré" required>
+              </div>
+              <div class="form-group">
+                <label for="emailAddr" class="form-label" data-i18n="form_email">Adresse E-mail *</label>
+                <input type="email" id="emailAddr" name="email" class="form-input" placeholder="nom@exemple.com"
+                  required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subjectInput" class="form-label" data-i18n="form_subject">Sujet *</label>
+              <input type="text" id="subjectInput" name="subject" class="form-input"
+                placeholder="Ex: Création d'une application et branding" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_types_title">Type de projet (Cochez vos besoins) :</label>
+              <div class="project-types-options">
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="projectType" value="Informatique" id="chkDev">
+                  <span data-i18n="chk_dev">Informatique &amp; Web/Mobile</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="projectType" value="Graphisme" id="chkDesign">
+                  <span data-i18n="chk_design">Design Graphique &amp; Branding</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="projectType" value="Vidéo" id="chkVideo">
+                  <span data-i18n="chk_video">Montage Vidéo &amp; Motion</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budgetRange" class="form-label" data-i18n="form_budget">Budget estimé :</label>
+              <select id="budgetRange" name="budget" class="form-select">
+                <option value="500-1500" data-i18n="budget_opt_1">Moins de 1 000 $ / 500 000 FCFA</option>
+                <option value="1500-3000" selected data-i18n="budget_opt_2">1 000 $ — 3 000 $ / 1M — 2M FCFA
+                </option>
+                <option value="3000+" data-i18n="budget_opt_3">Plus de 3 000 $ / 2M+ FCFA</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="messageText" class="form-label" data-i18n="form_msg">Votre Message *</label>
+              <textarea id="messageText" name="message" class="form-textarea" rows="4"
+                placeholder="Décrivez votre vision, vos besoins et délais prévus..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;" id="btnSubmitForm">
+              <i class="ri-send-plane-fill"></i> <span data-i18n="btn_send_msg">Envoyer le message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notification Toast en verre -->
+  <div class="glass-toast" id="glassToast" role="status">
+    <i class="ri-checkbox-circle-fill" style="color: var(--coral-rose); font-size: 1.4rem;"></i>
+    <span id="toastMessage">Merci ! Votre message a été envoyé avec succès.</span>
+  </div>
+
+  <!-- ==========================================================================
+       ⬛ PIED DE PAGE COMMUN (GLOBAL FOOTER)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Grande carte CTA d'accroche finale -->
+      <div class="footer-cta-banner">
+        <h2 class="footer-cta-title" data-i18n="footer_cta_title">Un projet en tête ? Travaillons ensemble.</h2>
+        <p class="footer-cta-desc" data-i18n="footer_cta_desc">
+          Transformons vos idées en solutions logicielles percutantes et en créations visuelles inoubliables.
+        </p>
+        <a href="#contact" class="btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2.2rem;"
+          data-i18n="btn_lets_talk">
+          <i class="ri-flashlight-line"></i> Démarrer une collaboration
+        </a>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="brand-logo" style="font-size: 1.1rem;">
+          <div class="logo-badge" style="width: 30px; height: 30px; font-size: 0.8rem;">EK</div>
+          <span class="logo-name">Enock Kaboré</span>
+        </div>
+
+        <p class="copyright-notice" data-i18n="footer_copy">
+          &copy; 2026 Enock Kaboré. Tous droits réservés. Conçu avec passion &amp; Glassmorphism.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Logic -->
+  <script src="script.js"></script>
+</body>
+
+</html>
